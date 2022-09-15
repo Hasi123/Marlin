@@ -3712,7 +3712,7 @@ static_assert(_PLUS_TEST(4), "HOMING_FEEDRATE_MM_M values must be positive.");
 
 #if !BLOCK_BUFFER_SIZE || !IS_POWER_OF_2(BLOCK_BUFFER_SIZE)
   #error "BLOCK_BUFFER_SIZE must be a power of 2."
-#elif BLOCK_BUFFER_SIZE > 64
+#elif BLOCK_BUFFER_SIZE > 128
   #error "A very large BLOCK_BUFFER_SIZE is not needed and takes longer to drain the buffer on pause / cancel."
 #endif
 
