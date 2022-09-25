@@ -1172,7 +1172,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 45 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 20, 45 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1185,7 +1185,7 @@
  * Override with M201
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }
+#define DEFAULT_MAX_ACCELERATION      { 10000, 10000, 200, 10000 }
 
 //#define LIMITED_MAX_ACCEL_EDITING     // Limit edit via M201 or LCD to DEFAULT_MAX_ACCELERATION * 2
 #if ENABLED(LIMITED_MAX_ACCEL_EDITING)
@@ -1692,15 +1692,15 @@
 
 // The size of the print bed
 #define X_BED_SIZE 220
-#define Y_BED_SIZE 220
+#define Y_BED_SIZE 212
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -29
-#define Y_MIN_POS -29
+#define X_MIN_POS -10
+#define Y_MIN_POS 8
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
-#define Y_MAX_POS 195
-#define Z_MAX_POS 200
+#define Y_MAX_POS 220
+#define Z_MAX_POS 170
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
