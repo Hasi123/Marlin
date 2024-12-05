@@ -95,6 +95,9 @@ typedef struct { raw_adc_t value; celsius_t celsius; } temp_entry_t;
 #if ANY_THERMISTOR_IS(505)    // Zonestar (P802QR2 Bed) thermistor
   #include "thermistor_505.h"
 #endif
+#if ANY_THERMISTOR_IS(506)    // ZONESTAR hotbed NTC 100K Beta 3950 thermistor
+  #include "thermistor_506.h"
+#endif
 #if ANY_THERMISTOR_IS(512)    // 100k thermistor in RPW-Ultra hotend, Pullup = 4.7kΩ, "unknown model"
   #include "thermistor_512.h"
 #endif
